@@ -84,7 +84,7 @@ function App() {
         /> <br />
         <button onClick={createNote}>Create VIT Message</button>
       </div>
-      <div className= "flex-container" style={{marginBottom: 30}}>
+      <div className= "flex-container cent" style={{marginBottom: 30}}>
       {
       notes.map(note => (
         <div className="card card--inverted" key={note.id || note.name}>
