@@ -1,0 +1,21 @@
+{
+    "appName": "virtualization",
+    "roleName": "pinpointLambdaRole12163e14",
+    "cloudformationPolicyName": "cloudformationPolicy12163e14",
+    "cloudWatchPolicyName": "cloudWatchPolicy12163e14",
+    "pinpointPolicyName": "pinpointPolicy12163e14",
+    "authPolicyName": "pinpoint_amplify_12163e14",
+    "unauthPolicyName": "pinpoint_amplify_12163e14",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    }
+}

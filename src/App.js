@@ -55,8 +55,12 @@ function App() {
 
   document.body.style = 'url("background.jpg")';
 
-
+  Analytics.record({
+    name: 'siteVisit', 
+    immediate: true
+  });
   return (
+    
     <div className="App">
       <h1>My Virtualization App</h1>
       <div className="card cent">

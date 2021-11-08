@@ -1,6 +1,6 @@
 {
     "identityPoolName": "virtualizatione6515401_identitypool_e6515401",
-    "allowUnauthenticatedIdentities": false,
+    "allowUnauthenticatedIdentities": true,
     "resourceNameTruncated": "virtuae6515401",
     "userPoolName": "virtualizatione6515401_userpool_e6515401",
     "autoVerifiedAttributes": [
