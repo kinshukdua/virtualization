@@ -53,36 +53,41 @@ function App() {
     await API.graphql({ query: deleteNoteMutation, variables: { input: { id } }});
   }
 
+  document.body.style = 'url("background.jpg")';
 
 
   return (
     <div className="App">
       <h1>My Virtualization App</h1>
-      <input
-        onChange={e => setFormData({ ...formData, 'name': e.target.value})}
-        placeholder="Note name"
-        value={formData.name}
-      />
-      <input
-        onChange={e => setFormData({ ...formData, 'description': e.target.value})}
-        placeholder="Note description"
-        value={formData.description}
-      />
-      <input
-        type="file"
-        onChange={onChange}
-      />
-      <button onClick={createNote}>Create VIT Message</button>
-      <div style={{marginBottom: 30}}>
+      <div className="card">
+        <input
+          onChange={e => setFormData({ ...formData, 'name': e.target.value})}
+          placeholder="Message name"
+          value={formData.name}
+        /> <br />
+        <input
+          onChange={e => setFormData({ ...formData, 'description': e.target.value})}
+          placeholder="Message description"
+          value={formData.description}
+        /> <br />
+        <input
+          type="file"
+          
+          onChange={onChange}
+        /> <br />
+        <button onClick={createNote}>Create VIT Message</button>
+      </div>
+      <div className= "flex-container" style={{marginBottom: 30}}>
       {
       notes.map(note => (
-        <div key={note.id || note.name}>
+        <div className="card card--inverted" key={note.id || note.name}>
             <h2>{note.name}</h2>
             <p>{note.description}</p>
-            <button onClick={() => deleteNote(note)}>Delete note</button>
             {
-              note.image && <img src={note.image} style={{width: 400}} />
+              note.image && <img src={note.image} style={{width: 200}} />
             }
+            <br />
+            <button onClick={() => deleteNote(note)}>Delete note</button>
           </div>
         ))
       }
