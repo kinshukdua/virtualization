@@ -59,7 +59,7 @@ function App() {
   return (
     <div className="App">
       <h1>My Virtualization App</h1>
-      <div className="card">
+      <div className="card cent">
         <input
           onChange={e => setFormData({ ...formData, 'name': e.target.value})}
           placeholder="Message name"

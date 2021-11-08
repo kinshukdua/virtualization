@@ -194,3 +194,7 @@ input[type="file"]::-webkit-file-upload-button{
   font-weight: 900;
   cursor: pointer;
 }
+
+.cent {
+  margin: 0 auto;
+}
